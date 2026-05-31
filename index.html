@@ -68,6 +68,14 @@
                 btnDiv.innerHTML = "<button onclick='location.reload()'>Recommencer</button>";
             }
      }
+            else if (choix === 9) {
+                titre.innerHTML = "Chapitre 4 : L'évasion";
+                desc.innerHTML = "Le téléchargement est terminé, mais les alarmes retentissent ! Les gardes arrivent dans le couloir. Que faites-vous ?";
+                btnDiv.innerHTML = `
+                    <button onclick="jeu(10)">Sauter par la fenêtre (Risqué)</button>
+                    <button onclick="jeu(11)">Se cacher dans le conduit d'aération</button>
+                `;
+            }
  </script>   
 </body>
 </html>
