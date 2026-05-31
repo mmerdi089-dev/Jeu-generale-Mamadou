@@ -39,3 +39,60 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Le Commandement du Général M.</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; text-align: center; background-color: #2c3e50; color: white; padding: 50px; }
+        #jeu { background: #34495e; padding: 30px; border-radius: 15px; max-width: 600px; margin: auto; }
+        button { margin: 10px; padding: 12px 24px; cursor: pointer; border: none; border-radius: 5px; font-weight: bold; background-color: #3498db; color: white; }
+        button:hover { background-color: #2980b9; }
+    </style>
+</head>
+<body>
+
+    <div id="jeu">
+        <h2 id="titre">Chapitre 1 : Libération de Val-Bamba</h2>
+        <p id="description">Général M., les 'Ombres' bloquent l'entrée de la cité. Quel est votre ordre ?</p>
+        <div id="boutons">
+            <button onclick="jeu(1)">Offensive frontale</button>
+            <button onclick="jeu(2)">Contournement tactique</button>
+        </div>
+    </div>
+
+    <script>
+        function jeu(choix) {
+            let titre = document.getElementById("titre");
+            let desc = document.getElementById("description");
+            let btnDiv = document.getElementById("boutons");
+
+            if (choix === 1) {
+                titre.innerHTML = "Échec !";
+                desc.innerHTML = "L'ennemi vous attendait. Vous devez mieux planifier vos assauts.";
+                btnDiv.innerHTML = "<button onclick='location.reload()'>Recommencer</button>";
+            } 
+            else if (choix === 2) {
+                titre.innerHTML = "Chapitre 2 : La Traversée du Pont";
+                desc.innerHTML = "La ville est libérée, mais les 'Ombres' se replient vers le pont de la rivière. Comment avancez-vous ?";
+                btnDiv.innerHTML = `
+                    <button onclick="jeu(3)">Traverser rapidement</button>
+                    <button onclick="jeu(4)">Envoyer une unité de déminage d'abord</button>
+                `;
+            }
+            else if (choix === 3) {
+                titre.innerHTML = "Piège !";
+                desc.innerHTML = "Le pont était miné. L'embuscade a été fatale. Mission échouée.";
+                btnDiv.innerHTML = "<button onclick='location.reload()'>Recommencer</button>";
+            }
+            else if (choix === 4) {
+                titre.innerHTML = "Victoire !";
+                desc.innerHTML = "Vous avez évité le piège. Le pont est sécurisé et la mission est un succès total. Bravo, Général !";
+                btnDiv.innerHTML = "<button onclick='location.reload()'>Rejouer</button>";
+            }
+        }
+    </script>
+</body>
+</html>
+
