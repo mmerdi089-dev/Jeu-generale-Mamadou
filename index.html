@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Le Commandement du Général M.</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background-color: #f4f4f4; padding: 50px; }
+        #jeu { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 600px; margin: auto; }
+        button { margin: 10px; padding: 10px 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div id="jeu">
+        <h2 id="titre">Mission : Libération de Val-Bamba</h2>
+        <p id="description">Général M., vous arrivez aux portes de Val-Bamba. Les 'Ombres' bloquent l'entrée principale. Quel est votre ordre ?</p>
+        
+        <div id="boutons">
+            <button onclick="choix(1)">Lancer une offensive frontale</button>
+            <button onclick="choix(2)">Prendre à revers par les montagnes</button>
+        </div>
+    </div>
+
+    <script>
+        function choix(option) {
+            let desc = document.getElementById("description");
+            let btnDiv = document.getElementById("boutons");
+
+            if (option === 1) {
+                desc.innerHTML = "L'offensive frontale a été trop brutale. Les 'Ombres' étaient préparées. Mission échouée !";
+                btnDiv.innerHTML = "<button onclick='location.reload()'>Recommencer</button>";
+            } else if (option === 2) {
+                desc.innerHTML = "Brillant ! Le contournement par les montagnes a surpris les 'Ombres'. La ville est libérée. Bravo Général !";
+                // Ici, plus tard, on ajoutera le passage au chapitre 2
+                btnDiv.innerHTML = "<button onclick='alert(\"Chapitre 2 à venir...\")'>Continuer la mission</button>";
+            }
+        }
+    </script>
+
+</body>
+</html>
