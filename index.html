@@ -75,6 +75,57 @@
                     <button onclick="jeu(10)">Sauter par la fenêtre (Risqué)</button>
                     <button onclick="jeu(11)">Se cacher dans le conduit d'aération</button>
                 `;
+             else if (choix === 10) {
+                titre.innerHTML = "Chapitre 5 : Le combat";
+                desc.innerHTML = "Les gardes approchent ! Vos soldats se mettent en position, commencent à tirer et se déplacent pour contourner l'ennemi. Que faites-vous ?";
+                btnDiv.innerHTML = `
+                    <button onclick="jeu(12)">Appuyer l'attaque avec un tir de couverture</button>
+                    <button onclick="jeu(13)">Changer de position stratégique</button>
+                `;
+            }
+           }
+            else if (choix === 12) {
+                titre.innerHTML = "Chapitre 6 : Attaque tactique";
+                desc.innerHTML = "Tes tirs de couverture permettent à tes soldats d'avancer. La zone est presque nettoyée !";
+                btnDiv.innerHTML = "<button onclick='jeu(14)'>Sécuriser la zone</button>";
+            }
+            else if (choix === 13) {
+                titre.innerHTML = "Chapitre 6 : Manœuvre de flanc";
+                desc.innerHTML = "En changeant de position, tu surprends l'ennemi. Ils battent en retraite !";
+                btnDiv.innerHTML = "<button onclick='jeu(14)'>Poursuivre l'ennemi</button>";
+            }
+            else if (choix === 14) {
+                titre.innerHTML = "Chapitre 7 : La découverte";
+                desc.innerHTML = "En sécurisant la zone, vous trouvez une mallette contenant les plans secrets du projet ennemi. Que faites-vous ?";
+                btnDiv.innerHTML = `
+                    <button onclick="jeu(15)">Ouvrir la mallette</button>
+                    <button onclick="jeu(16)">Attendre les renforts pour l'ouvrir</button>
+                `;
+            }
+            else if (choix === 15) {
+                titre.innerHTML = "Chapitre 8 : Le contenu";
+                desc.innerHTML = "La mallette contient des codes de lancement ! Vous devez agir vite.";
+                btnDiv.innerHTML = "<button onclick='jeu(17)'>Désactiver les codes</button>";
+            }
+            else if (choix === 16) {
+                titre.innerHTML = "Chapitre 8 : Renforts";
+                desc.innerHTML = "Les renforts arrivent et sécurisent la mallette. Vous avez réussi à contenir la menace.";
+                btnDiv.innerHTML = "<button onclick='jeu(18)'>Terminer la mission</button>";
+            }
+            else if (choix === 17) {
+                titre.innerHTML = "Chapitre 9 : Désactivation";
+                desc.innerHTML = "Les codes sont désactivés in extremis. La menace mondiale est écartée !";
+                btnDiv.innerHTML = "<button onclick='jeu(19)'>Vers la fin</button>";
+            }
+            else if (choix === 18) {
+                titre.innerHTML = "Chapitre 9 : Victoire";
+                desc.innerHTML = "La mission est un succès total, les Ombres sont neutralisées.";
+                btnDiv.innerHTML = "<button onclick='jeu(19)'>Vers la fin</button>";
+            }
+            else if (choix === 19) {
+                titre.innerHTML = "Chapitre 10 : Épilogue";
+                desc.innerHTML = "Vous rentrez au QG en héros. La vie d'étudiant reprend, mais vous n'êtes plus le même...";
+                btnDiv.innerHTML = "<button onclick='location.reload()'>Rejouer</button>";
             }
  </script>   
 </body>
