@@ -47,11 +47,28 @@
             }
             else if (choix === 4) {
                 titre.innerHTML = "Victoire !";
-                desc.innerHTML = "Vous avez évité le piège. Le pont est sécurisé et la mission est un succès total. Bravo, Général !";
-                btnDiv.innerHTML = "<button onclick='location.reload()'>Rejouer</button>";
+                desc.innerHTML = "Vous avez évité le piège. Le pont est sécurisé et la mission est un succès total. Bravo, 
+       btnDiv.innerHTML = "<button onclick='jeu(5)'>Continuer vers le QG</button>";⁠     }
+               else if (choix === 5) {
+                titre.innerHTML = "Chapitre 3 : L'infiltration du QG";
+                desc.innerHTML = "Vous arrivez devant le QG des Ombres. Le périmètre est fortement gardé. Comment procédez-vous ?";
+                btnDiv.innerHTML = `
+                    <button onclick="jeu(7)">Utiliser les égouts (Furtivité)</button>
+                    <button onclick="jeu(8)">Diversion à la porte principale (Force)</button>
+                `;
             }
-        }
-    </script>
+            else if (choix === 7) {
+                titre.innerHTML = "Dans l'ombre...";
+                desc.innerHTML = "Vous avez réussi à pénétrer dans le QG sans être vu. Vous êtes maintenant dans la salle des serveurs.";
+                btnDiv.innerHTML = "<button onclick='jeu(9)'>Pirater les données</button>";
+            }
+            else if (choix === 8) {
+                titre.innerHTML = "Le combat fait rage !";
+                desc.innerHTML = "L'ennemi a été pris au dépourvu, mais ils sont trop nombreux. Vous êtes coincé !";
+                btnDiv.innerHTML = "<button onclick='location.reload()'>Recommencer</button>";
+            }
+     }
+ </script>   
 </body>
 </html>
    
