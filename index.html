@@ -4,32 +4,6 @@
     <meta charset="UTF-8">
     <title>Le Commandement du Général M.</title>
     <style>
-        body { font-family: sans-serif; text-align: center; background-color: #f4f4f4; padding: 50px; }
-        #jeu { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 600px; margin: auto; }
-        button { margin: 10px; padding: 10px 20px; cursor: pointer; }
-    </style>
-</head>
-<body>
-
-    <div id="jeu">
-        <h2 id="titre">Mission : Libération de Val-Bamba</h2>
-        <p id="description">Général M., vous arrivez aux portes de Val-Bamba. Les 'Ombres' bloquent l'entrée principale. Quel est votre ordre ?</p>
-        
-        <div id="boutons">
-            <button onclick="choix(1)">Lancer une offensive frontale</button>
-            <button onclick="choix(2)">Prendre à revers par les montagnes</button>
-        </div>
-    </div>
-
-    
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Le Commandement du Général M.</title>
-    <style>
         body { font-family: 'Segoe UI', sans-serif; text-align: center; background-color: #2c3e50; color: white; padding: 50px; }
         #jeu { background: #34495e; padding: 30px; border-radius: 15px; max-width: 600px; margin: auto; }
         button { margin: 10px; padding: 12px 24px; cursor: pointer; border: none; border-radius: 5px; font-weight: bold; background-color: #3498db; color: white; }
@@ -48,7 +22,7 @@
     </div>
 
     <script>
-         function jeu(choix) {
+        function jeu(choix) {
             let titre = document.getElementById("titre");
             let desc = document.getElementById("description");
             let btnDiv = document.getElementById("boutons");
@@ -77,5 +51,8 @@
                 btnDiv.innerHTML = "<button onclick='location.reload()'>Rejouer</button>";
             }
         }
-       
+    </script>
+</body>
+</html>
+   
 
